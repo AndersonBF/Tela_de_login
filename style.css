@@ -1,5 +1,10 @@
+
+
+
 body {
-    background: linear-gradient(145deg, red, blue, #9679e9);
+    background-image: linear-gradient( 110.1deg,  rgb(69, 27, 147) 44.2%, rgb(80, 0, 91) 138.2%, rgb(255, 148, 226) 138.2% );
+    background-size: 300% 300%;
+
     min-height: 100vh;
     height : 100%;
     padding:  0;
@@ -8,15 +13,32 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: colors 5s infinite;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 300px) {
     body {
-        background-color: aliceblue;
+        background-color: rgba(240, 248, 255, 0.012);
     }
 }
 
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+
+}
+
 h3 {
+    color:#ffffff;
+    opacity: 1;
     font-size: 32px;
     font-weight: bolder;
     text-align: center;
@@ -24,7 +46,8 @@ h3 {
 }
 
 .login-box {
-    background-color: white;
+    opacity: 0.9;
+    background-color: rgba(255, 255, 255, 0.109);
     border-radius: 10px;
     width: 400px;
     padding: 30px;
@@ -37,7 +60,18 @@ h3 {
         margin-top: 20px;
 }
 
+.icone {
+    width: auto;
+    height: auto;
+    max-width: 10px;
+    max-height: 10px;
+    position: relative;
+    top: -80px;
+    left: 150px;
+}
+
 label {
+    color: white;
     font-weight: bold;
     font-size: 14px;
     margin: 10px 0;
@@ -72,6 +106,12 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    
+    color:black;
+
+}
+
 p{
     font-size: 14px;
     text-align: center;
@@ -82,3 +122,4 @@ a {
     font-weight: bold;
     text-decoration: none;
 }
+
